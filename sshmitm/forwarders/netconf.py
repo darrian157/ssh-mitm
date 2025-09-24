@@ -178,13 +178,13 @@ class NetconfForwarder(NetconfBaseForwarder):
                     
                     if request_size > 10000:  # 10KB threshold for requests
                         logging.info(
-                            "CLIENT_REQUEST: %d bytes, showing first 500 chars: %s...",
+                            "CLIENT_REQUEST:\n %d bytes, showing first 500 chars: %s...",
                             request_size,
                             clean_request[:500],
                         )
                     else:
                         logging.info(
-                            "CLIENT_REQUEST: %s",
+                            "CLIENT_REQUEST:\n %s",
                             clean_request,
                         )
                     
@@ -198,13 +198,13 @@ class NetconfForwarder(NetconfBaseForwarder):
                     
                     if response_size > 10000:  # 10KB threshold for responses
                         logging.info(
-                            "SERVER_RESPONSE: %d bytes, showing first 500 chars: %s...",
+                            "SERVER_RESPONSE:\n %d bytes, showing first 500 chars: %s...",
                             response_size,
                             clean_response[:500],
                         )
                     else:
                         logging.info(
-                            "SERVER_RESPONSE: %s",
+                            "SERVER_RESPONSE:\n %s",
                             clean_response,
                         )
                     
